@@ -1,9 +1,11 @@
 import { useState } from "react";
+import Header from "./components/Header";
+import "./index.css";
 
 export default function App() {
   return (
-    <div className="h-screen flex items-center justify-center bg-beige text-navy">
-      <h1 className="text-4xl font-bold">Hello, Tailwind!</h1>
-    </div>
+    <main className="bg-beige text-navy dark:bg-navy dark:text-beige min-h-screen">
+      <Header />
+    </main>
   );
 }
