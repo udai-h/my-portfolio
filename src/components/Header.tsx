@@ -3,7 +3,7 @@ export default function Header() {
     <header className="h-screen flex flex-col justify-center text-left px-6">
       <h1 className="text-5xl sm:text-6xl font-extrabold">Yudai Hinata</h1>
       <p className="mt-4 text-lg text-navy dark:text-beige">
-        Software Engineer (Frontend & Backend)
+        Software Engineer (Frontend & Backend) @Sydney
       </p>
       <p className="mt-2 text-lg text-navy dark:text-beige">
         Engineering value through the harmony of logic and empathy.
