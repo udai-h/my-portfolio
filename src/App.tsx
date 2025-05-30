@@ -5,6 +5,7 @@ import About from "./components/About";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import DarkModeToggle from "./components/DarkModeToggle";
 import "./index.css";
 
 export default function App() {
@@ -60,6 +61,9 @@ export default function App() {
         <Education />
         <Skills />
         <Projects />
+        <div className="hidden lg:block fixed bottom-10 right-10 z-50">
+          <DarkModeToggle />
+        </div>
       </main>
     </div>
   );

@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        beige: "#f5f0e6",
-        navy: "#2b3a55",
+        beige: "#f0e8db",
+        navy: "#141B2F",
       },
       screens: {
         sm: "640px",
