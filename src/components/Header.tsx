@@ -63,7 +63,7 @@ export default function Header({ activeSection, onSectionClick }: HeaderProps) {
           rel="noopener noreferrer"
           aria-label="GitHub"
         >
-          <FaGithub className="w-8 h-8 hover:text-gold transition-colors" />
+          <FaGithub className="w-7 h-7 hover:text-gold transition-colors" />
         </a>
         <a
           href="https://linkedin.com/in/yudai-hinata"
@@ -71,7 +71,7 @@ export default function Header({ activeSection, onSectionClick }: HeaderProps) {
           rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
-          <FaLinkedin className="w-8 h-8 hover:text-gold transition-colors" />
+          <FaLinkedin className="w-7 h-7 hover:text-gold transition-colors" />
         </a>
       </div>
     </header>
