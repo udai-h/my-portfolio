@@ -1,7 +1,7 @@
 export default function Education() {
   return (
-    <section className="max-w-3xl mx-auto px-6 lg:py-4 pt-16 text-left">
-      <h2 className="text-xl font-bold mb-4 lg:hidden">Education</h2>
+    <section id="education" className="max-w-3xl mx-auto px-6 pt-16 text-left">
+      <h2 className="lg:text-2xl text-xl font-bold mb-4">Education</h2>
       <div className="space-y-6">
         <div>
           <h3 className="lg:text-xl text-base font-semibold text-navy dark:text-beige">

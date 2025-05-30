@@ -1,7 +1,10 @@
 export default function About() {
   return (
-    <section className="max-w-3xl mx-auto px-6 lg:py-24 text-left lg:text-lg text-base">
-      <h2 className="text-xl font-bold mb-4 lg:hidden">About</h2>
+    <section
+      id="about"
+      className="max-w-3xl mx-auto px-6 lg:pt-24 text-left lg:text-lg text-base"
+    >
+      <h2 className="lg:text-2xl text-xl font-bold mb-4">About</h2>
       <p className="text-navy dark:text-beige">
         I'm a software engineer studying Computer Science at The University of
         New South Wales.
