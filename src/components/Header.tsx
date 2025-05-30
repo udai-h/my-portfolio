@@ -1,3 +1,5 @@
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 type HeaderProps = {
   activeSection: string;
   onSectionClick: (id: string) => void;
@@ -21,14 +23,14 @@ export default function Header({ activeSection, onSectionClick }: HeaderProps) {
   return (
     <header className="flex flex-col justify-center text-left px-6 py-24">
       <h1 className="text-5xl font-extrabold">Yudai Hinata</h1>
-      <p className="mt-4 text-lg text-navy dark:text-beige">
+      <p className="mt-4 text-lg font-bold text-navy dark:text-beige">
         Software Engineer (Frontend & Backend) @Sydney
       </p>
       <p className="mt-2 text-lg text-navy dark:text-beige">
         Engineering value through the harmony of logic and empathy.
       </p>
 
-      <nav className="space-y-4 pt-16">
+      <nav className="space-y-4 pt-24">
         {navItems.map((item) => (
           <button
             key={item.id}
@@ -54,6 +56,24 @@ export default function Header({ activeSection, onSectionClick }: HeaderProps) {
           </button>
         ))}
       </nav>
+      <div className="absolute bottom-24 flex gap-6">
+        <a
+          href="https://github.com/udai-h"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <FaGithub className="w-8 h-8 hover:text-gold transition-colors" />
+        </a>
+        <a
+          href="https://linkedin.com/in/yudai-hinata"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedin className="w-8 h-8 hover:text-gold transition-colors" />
+        </a>
+      </div>
     </header>
   );
 }
