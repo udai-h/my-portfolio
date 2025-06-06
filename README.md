@@ -2,17 +2,17 @@
 
 This is my personal developer portfolio built with [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) + [Vite](https://vitejs.dev/) and styled using [Tailwind CSS](https://tailwindcss.com/).
 
-## 🌐 Live Site
+## Live Site
 
-👉 [View My Portfolio](https://udai-h.github.io/my-portfolio/)
+[View My Portfolio](https://udai-h.github.io/my-portfolio/)
 
-## 📦 Tech Stack
+## Tech Stack
 
 - React + TypeScript + Vite
 - Tailwind CSS
 - GitHub Pages for deployment
 
-## 🛠️ Features
+## Features
 
 - Responsive layout (PC / mobile)
 - Light/Dark mode toggle
