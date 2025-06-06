@@ -40,7 +40,7 @@ export default function Header({ activeSection, onSectionClick }: HeaderProps) {
             <span
               className={`block h-0.5 rounded-full transition-all duration-300 ${
                 activeSection === item.id
-                  ? "w-20 bg-navy dark:bg-beige"
+                  ? "w-16 bg-navy dark:bg-beige"
                   : "w-8 bg-gray-400 group-hover:w-20"
               }`}
             />

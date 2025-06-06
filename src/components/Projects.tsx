@@ -11,7 +11,7 @@ export default function Projects() {
 
       <div className="flex flex-col sm:flex-row items-center gap-8">
         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-8 p-4 w-full border shadow border-[#486ea0] border-opacity-40 rounded-lg  transition-transform duration-300 overflow-hidden text-inherit group relative">
-          <div className="absolute inset-0 bg-[#486ea0]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-[#486ea0]/10 dark:bg-[#486ea0]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none"></div>
 
           <h3 className="text-lg font-semibold text-left block sm:hidden z-20">
             Chrome Extension: Pomodoro Bar
@@ -75,7 +75,7 @@ export default function Projects() {
 
       <div className="flex flex-col sm:flex-row items-center gap-8 mt-5">
         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-8 p-4 w-full border shadow border-[#486ea0] border-opacity-40 rounded-lg  transition-transform duration-300 overflow-hidden text-inherit group relative">
-          <div className="absolute inset-0 bg-[#486ea0]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-[#486ea0]/10 dark:bg-[#486ea0]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none"></div>
 
           <h3 className="text-lg font-semibold text-left block sm:hidden z-20">
             Portfolio Website

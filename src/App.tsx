@@ -11,36 +11,43 @@ import "./index.css";
 export default function App() {
   const [activeSection, setActiveSection] = useState("about");
   const mainRef = useRef<HTMLDivElement | null>(null);
+  const ignoreObserver = useRef(false);
+  const ignoreTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    const sections =
-      mainRef.current?.querySelectorAll<HTMLElement>("section[id]");
-    if (!sections || sections.length === 0) return;
+    const container = mainRef.current;
+    if (!container) return;
+
+    const sections = container.querySelectorAll<HTMLElement>("section[id]");
+    if (sections.length === 0) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
-        const inView = entries.filter((e) => e.isIntersecting);
-        if (inView.length === 0) return;
-        const topMost = inView.reduce((prev, curr) =>
-          prev.boundingClientRect.top < curr.boundingClientRect.top
-            ? prev
-            : curr
+        if (ignoreObserver.current) return;
+        const visible = entries.find(
+          (e) => e.isIntersecting && e.intersectionRatio >= 0.5
         );
-        setActiveSection(topMost.target.id);
+        if (visible) setActiveSection(visible.target.id);
       },
       {
-        root: mainRef.current,
-        threshold: 0.1,
-        rootMargin: "0px 0px 0px 0px",
+        root: null,
+        threshold: 0.95,
       }
     );
 
     sections.forEach((sec) => observer.observe(sec));
-    return () => {
-      sections.forEach((sec) => observer.unobserve(sec));
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, []);
+
+  const handleSectionClick = (id: string) => {
+    ignoreObserver.current = true;
+    if (ignoreTimer.current) clearTimeout(ignoreTimer.current);
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setActiveSection(id);
+    ignoreTimer.current = setTimeout(() => {
+      ignoreObserver.current = false;
+    }, 700);
+  };
 
   return (
     <div className="flex flex-col xl:flex-row min-h-screen bg-beige text-navy dark:bg-navy dark:text-beige">
@@ -50,7 +57,7 @@ export default function App() {
       <aside className="hidden xl:block xl:w-2/5 p-10 pt-0 pl-36 h-screen sticky top-0">
         <Header
           activeSection={activeSection}
-          onSectionClick={(id: string) => setActiveSection(id)}
+          onSectionClick={handleSectionClick}
         />
       </aside>
       <main
