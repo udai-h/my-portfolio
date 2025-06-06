@@ -30,7 +30,7 @@ export default function Header({ activeSection, onSectionClick }: HeaderProps) {
         Engineering value through the harmony of logic and empathy.
       </p>
 
-      <nav className="space-y-4 pt-24">
+      <nav className="space-y-4 pt-24 hide-nav-on-small-height">
         {navItems.map((item) => (
           <button
             key={item.id}

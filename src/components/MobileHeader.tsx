@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Header() {
   return (
-    <header className="flex flex-col text-left px-6 mt-8">
+    <header className="flex flex-col text-left px-6 max-w-screen-md mt-8 mx-auto">
       <h1 className="text-4xl font-[1000]">Yudai Hinata</h1>
       <p className="mt-2 text-lg font-bold text-navy dark:text-beige">
         Software Engineer @Sydney

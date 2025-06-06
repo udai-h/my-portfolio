@@ -4,3 +4,9 @@
 html {
   scroll-behavior: smooth;
 }
+
+@media (max-height: 670px) {
+  .hide-nav-on-small-height {
+    display: none !important;
+  }
+}
